@@ -4,7 +4,7 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html ng-app="MySite">
 	<head>
 		<title>Kemaric World</title>
 		<meta charset="utf-8" />
@@ -13,11 +13,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
+		</head>
 	<body>
 
 		<!-- Wrapper-->
-			<div id="wrapper">
+			<div id="wrapper" ng-controller="mySiteCtrl as ctrl">
 
 				<!-- Nav -->
 					<nav id="nav">
@@ -42,13 +42,13 @@
 									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
 									<img src="images/me_3.jpg" alt="" />
 								</a>
-							</article>				
+							</article>
 						<!-- About Me -->
 							<article id="about" class="panel">
 								<header>
 									<h2>About Me</h2>
 								</header>
-								<p>
+								<p ng-hide="true">
 									I am a graduate of the University of Maryland, College Park
 									with a passion for software and mobile development. I have a solid background
 									and love in Computer Science, which complements my degree in
@@ -245,6 +245,12 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<!--AngularJS-->
+			 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+			 <!--Firebase-->
+			 <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+
+			 <script src="assets/js/app.js"></script>
 
 	</body>
 </html>
