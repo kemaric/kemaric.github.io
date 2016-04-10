@@ -4,7 +4,7 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html ng-app="MySite">
+<html>
 	<head>
 		<title>Kemaric World</title>
 		<meta charset="utf-8" />
@@ -13,11 +13,31 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- Scripts -->
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<!-- Firebase -->
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+		<!-- Angular UI-->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+	 	<script src="assets/js/app.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/skel-viewport.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+
 		</head>
-	<body>
+	<body ng-app="MySite">
 
 		<!-- Wrapper-->
-			<div id="wrapper" ng-controller="mySiteCtrl as ctrl">
+			<div id="wrapper" ng-controller="MySiteCtrl as vm">
 
 				<!-- Nav -->
 					<nav id="nav">
@@ -48,53 +68,24 @@
 								<header>
 									<h2>About Me</h2>
 								</header>
-								<p ng-hide="true">
-									I am a graduate of the University of Maryland, College Park
-									with a passion for software and mobile development. I have a solid background
-									and love in Computer Science, which complements my degree in
-									Geographical Information Systems. I hope to use my development skills to make
-									a positive impact in the world. Some of my hobbies include soccer, hiking, video
-									games and recently attending advanced movie screenings.
+								<p>
+									{{ vm.About.details }}
 								</p>
+								<h3>
+									Interests
+								</h3>
 								<section>
-									<div class="row">
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
-										</div>
-									</div>
+									<div style="height: 305px">
+										<uib-carousel active="active" internal="myInterval"
+											no-wrap="noWrapSlides">
+											<uib-slide ng-repeat="slide in vm.Interests">
+												<img ng-src="images/{{ slide.sortName }}.jpg" style="margin:auto;">
+												<div clss="carousel-caption">
+													<h4>{{ vm.slide.name}}</h4>
+												</div>
+											</uib-slide>
+										</uib-carousel>
+									</dv>
 								</section>
 							</article>
 						<!-- Work -->
@@ -237,20 +228,5 @@
 					</div>
 
 			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/skel-viewport.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<!--AngularJS-->
-			 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-			 <!--Firebase-->
-			 <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
-
-			 <script src="assets/js/app.js"></script>
-
 	</body>
 </html>

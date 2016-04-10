@@ -1,0 +1,10 @@
+[
+    {"name":"Soccer", "sortName": "soccer"},
+    {"name":"New Technologies", "sortName": "tech"},
+    {"name":"Cultural Immersion", "sortName": "culture"},
+    {"name":"Android Development", "sortName": "android"},
+    {"name":"Video Games", "sortName": "games"},
+    {"name":"Anime/Manga", "sortName": "anime"},
+    {"name":"Movies", "sortName": "movies"},
+    {"name":"Hiking", "sortName": "hiking"}
+  ]

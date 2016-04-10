@@ -1,42 +1,30 @@
-var myApp = angular.module('MySite', []);
-var fireBaeUrl = "https://kemario.firebaseio.com/";
-myApp.controller('mySiteCtrl', ['$scope', "$window", "firebase"], function($scope){
-  $scope.ref = new Firebase(firebaseURL);
-  $scope.aboutMe = "";
-  $scope.education;
-  $scope.interests;
-  $scope.languages;
-  $scope.skills;
-  $scope.work;
-  debug = 1;
+var myApp = angular.module("MySite", ["firebase", 'ngAnimate', 'ui.bootstrap']);
+var firebaseURL = "https://kemario.firebaseio.com";
+var debug = true;
 
-  $scope.ref.on("value",
-  function(snapshot){
-    if(debug == 1)
-      console.log("Getting about me: "+ snapshot.About);
-    $scope.aboutMe = snapshot.About;
+myApp.controller("MySiteCtrl", ["$scope", "$firebaseObject",
+  function($scope, $firebaseObject) {
+     var ref = new Firebase(firebaseURL);
+     $scope.myInterval = 5000;
+     $scope.noWrapSlides = false;
+     $scope.active = 0;
+     var obj = $firebaseObject(ref);
+     // to take an action after the data loads, use the $loaded() promise
+     obj.$loaded().then(function() {
+        console.log("loaded record:", obj.$id);
 
-    if(debug == 1)
-      console.log("Getting education: "+ snapshot.Education);
-    $scope.education = snapshot.Education;
+       // To iterate the key/value pairs of the object, use angular.forEach()
+       console.log("Going over the key and values.");
+       angular.forEach(obj, function(value, key) {
+          console.log(key, value);
+          $scope[key] = value;
+       });
+     });
 
-    if(debug == 1)
-      console.log("Getting interests: "+ snapshot.Interests);
-    $scope.interests = snapshot.Interests;
+     // To make the data available in the DOM, assign it to $scope
+     $scope.data = obj;
 
-    if(debug == 1)
-      console.log("Getting languages: "+ snapshot.Languages);
-    $scope.languages = snapshot.Languages;
-
-    if(debug == 1)
-      console.log("Getting skills: "+ snapshot.Skills);
-    $scope.skills = snapshot.Skills;
-
-    if(debug == 1)
-      console.log("Getting work: "+ snapshot.Work);
-    $scope.work = snapshot.Work;
-
-  }, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
-});
+     // For three-way data bindings, bind it to the scope instead
+     //obj.$bindTo($scope, "data");
+  }
+]);
