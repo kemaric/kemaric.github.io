@@ -11,22 +11,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!-- Scripts -->
+		<!-- Jquery -->
+		<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 		<!-- AngularJS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="assets/bower_components/angular/angular.min.js"></script>
 		<!-- Firebase -->
-		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<script src="assets/bower_components/firebase/firebase.js"></script>
 		<!-- AngularFire -->
-		<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-		<!-- Angular UI-->
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<script src="assets/bower_components/angularfire/dist/angularfire.min.js"></script>
+		<!-- Angular Animate-->
+		<script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+    	<!-- Angular UI-->
+		<script src="assets/bower_components/angular-ui/build/angular-ui.min.js"></script>
+		<!-- Angular Google Maps-->
+		<script src="assets/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+		<!-- Angular Route-->
+		<script src="assets/bower_components/angular-route/angular-route.min.js"></script>
+		<!-- Angular Route-->
+		<script src="assets/bower_components/angular-route/angular-route.min.js"></script>
+		
+    	<!-- Bootstrap -->
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
 
 	 	<script src="assets/js/app.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/MyService.js"></script>
+		<script src="assets/js/MySiteCtrl.js"></script>
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/skel-viewport.min.js"></script>
 		<script src="assets/js/util.js"></script>
@@ -58,8 +72,8 @@
 									<h1>Kemari Legg</h1>
 									<p>Software Developer</p>
 								</header>
-								<a href="#work" class="jumplink pic">
-									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+								<a href="#about" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>Learn about me</span></span>
 									<img src="images/me_3.jpg" alt="" />
 								</a>
 							</article>
@@ -68,23 +82,23 @@
 								<header>
 									<h2>About Me</h2>
 								</header>
-								<p>
-									{{ vm.About.details }}
+								<p ng-cloak>
+									{{ vm.model.About.details }}
 								</p>
 								<h3>
 									Interests
 								</h3>
 								<section>
-									<div style="height: 305px">
-										<uib-carousel active="active" internal="myInterval"
-											no-wrap="noWrapSlides">
-											<uib-slide ng-repeat="slide in vm.Interests">
+									<div style="height: 505px">
+										<div uib-carousel active="active" internal="myInterval" no-wrap="noWrapSlides">
+											<div uib-slide ng-repeat="slide in vm.model.Interests.things track by $index" index="$index">
 												<img ng-src="images/{{ slide.sortName }}.jpg" style="margin:auto;">
 												<div clss="carousel-caption">
-													<h4>{{ vm.slide.name}}</h4>
+													<h4 ng-cloak>{{slide.name}}</h4>
 												</div>
-											</uib-slide>
-										</uib-carousel>
+											</div>
+										</div>
+						
 									</dv>
 								</section>
 							</article>
@@ -94,49 +108,11 @@
 									<h2>Experience</h2>
 								</header>
 								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
+									I am a sofware developer with 3 years of experience from internships, classes, work 
+									and side projects
 								</p>
 								<section>
-									<div class="row">
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
-										</div>
-										<div class="4u 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
-										</div>
-										<div class="4u$ 12u$(mobile)">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
-										</div>
-									</div>
+									
 								</section>
 							</article>
 						<!-- Portfolio -->
@@ -145,9 +121,7 @@
 									<h2>Projects</h2>
 								</header>
 								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
+																		There are some of my projects.
 								</p>
 								<section>
 									<div class="row">

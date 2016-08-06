@@ -917,11 +917,14 @@
 		.image img {
 			display: block;
 			width: 100%;
+			max-width:100%;
+			max-height:100%;
 		}
 
 		.image.fit {
 			display: block;
 			width: 100%;
+			height: 100%;
 		}
 
 		.image.featured {
@@ -1167,6 +1170,7 @@
 			h2 {
 				font-size: 1.8em;
 				letter-spacing: -0.015em;
+				text-align: center;
 			}
 
 			h3, h4, h5, h6 {
@@ -1177,7 +1181,7 @@
 		/* Section/Article */
 
 			header {
-				margin: 0 0 1.5em 0;
+				margin: 0 0 1.5em 0;				
 			}
 
 				header > p {

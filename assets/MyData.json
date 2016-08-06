@@ -1,0 +1,104 @@
+{
+  "About" : {
+    "details" : "I am a recent graduate of the University of Maryland, College Park with a passion for software and mobile development. I have a solid background and love in Computer Science, which complements my degree in Geographical Information Systems. I hope to use my development skills to make a positive impact in the world."
+  },
+  "Education" : {
+    "Degree" : "Geographical Information Systems",
+    "School" : "University of Maryland College Park",
+    "Societies" : [ "Terripen Hackers", "Mobile App Developers Club", "Rotaract Club of College Park", "MHacks Hackathon", "Hack Duke Hackathon", "Terrapin Hackers", "Bitcamp", "Class Council", "Hackathon Hackers" ]
+  },
+  "Interests" : [ {
+    "img" : "https://scontent-iad3-1.xx.fbcdn.net/hphotos-xal1/v/t1.0-9/12670643_10153407991676776_4454831593591957706_n.jpg?oh=00c10b8333b7b9e37cfbb7f6d8414ae6&oe=57765412",
+    "name" : "Soccer",
+    "sortName" : "soccer"
+  }, {
+    "img" : "https://scontent-iad3-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/s851x315/11119092_469891049828577_8550177331800833115_n.jpg?oh=0425ab11d481753027d31b06e8ce5a08&oe=57812E9E",
+    "name" : "New Technologies",
+    "sortName" : "tech"
+  }, {
+    "img" : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiWw5rb8_LLAhVDKyYKHVknDcsQjRwIBw&url=https%3A%2F%2Fwww.google.es%2Fintl%2Fes_ALL%2Fmobile%2Fandroid%2F&psig=AFQjCNHTqZIRxyEqp4_vSdFkCRbgUXWH6A&ust=1459787856003079",
+    "name" : "Android Development",
+    "sortName" : "android"
+  }, {
+    "img" : "http://static5.gamespot.com/uploads/scale_large/1552/15524586/2975329-2974704-psx.jpg",
+    "name" : "Video Games",
+    "sortName" : "games"
+  }, {
+    "img" : "https://dwgkfo5b3odmw.cloudfront.net/img/promo_image/one_piece_anime_key_art.jpg",
+    "name" : "Anime/Manga",
+    "sortName" : "anime"
+  }, {
+    "img" : "https://lh3.googleusercontent.com/Sh6Lkfg3ki0ENJfRsGSD91GqRG2ay5JRR6T4uxELQhFWkzlpZXoLz19Wf_xBFd61jCQjGQYZaD10OSiPe68ht5VJT_nD3q94ZlTiMa38LHCqVJvCuUIpAHDEEtTuxZeQMvcI0LHgVwG28847SbJckxM2E8VUQ4xHcyaFa2yzFgBUQLaV6uc8vXNmOHdxIXy4FQ-bTY2SHiZVcJVCXtmO96Xsf_T3O7MRxP_ab4QokNuYzwsGmLnHDCCwF2Jp746AO-FWfDx74p2VCeol_2XAuhTda115WewSTDmOlVVUa51HE1g-bNjz082Fp-8Y5MHvmEnPgVW_WpeI2XQPiSoLu1FE4TuNNaFWHMP97jrVyp_XTEl9FgP5eux8Od_Z6mRLC0AL7-_b5BBkHhysv9PjITWX5A-t-XsTu9fYbijA8r_-8nOBM4dCEtNSaCXrpoBIwc6agmChjZ37Cn8-6PUdZQiwx_Sjlpzul7j93fX43CZVkLjztC6yfjwPHRoXC3FTE87g3pdYOUQ_GC-ij4F69Zol9oadXXXgLtkdcOs-swo411TLYaosn7xxUwE6O8C1mvlwiw=w1210-h681-no",
+    "name" : "Movies",
+    "sortName" : "movies"
+  }, {
+    "img" : "https://scontent-iad3-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/1175705_10151567644281456_2116405966_n.jpg?oh=feaa24d02fc29f524731bbf2fbe4b7b9&oe=578E8E65",
+    "name" : "Hiking",
+    "sortName" : "hiking"
+  } ],
+  "Languages" : [ "Java", "Python", "C#", "C++", "SQL", "Javascript", "ASP.NET" ],
+  "Skills" : [ "Android Development", "Object Oriented Programming", "Product Management" ],
+  "Work" : [ {
+    "FullName" : "Kratos Defense and Security Solutions",
+    "Job" : {
+      "Description" : [ "Developed a multi-platform auditing tool in C++ that is currently being used by several commercial clients, which checks that systems are up to date and contain and/or doesn't contain certain data.", "Wrote extensive documentation for the tool so clients can easily integrate it into their systems with ease.", "Wrote various Bash shell scrips that integrates tool on any platform.", "Learned about the Configuration Management process." ],
+      "EndDate" : "May 2014",
+      "StartDate" : "June 2013",
+      "Title" : "Software Developer Intern"
+    },
+    "Location" : {
+      "Address" : "5200 Philadelphia Way # G, Lanham, MD 20706"
+    },
+    "Logo" : "http://images.finanzen.net/mediacenter/unsortiert/kratos_defense_and_security_sol_by_org_260.jpg"
+  }, {
+    "FullName" : "University of Maryland: Geographical Sciences",
+    "Job" : {
+      "Description" : [ "Teaching Assistant for Object-Oriented Computer Programming for GIS (GEOG476)", "Assists students on their projects and lead class labs." ],
+      "EndDate" : "December 2014",
+      "StartDate" : "September 2014",
+      "Title" : "Undergraduate Teaching Assistant"
+    },
+    "Location" : {
+      "Address" : " 2181 LeFrak Hall, College Park, MD 20740"
+    },
+    "Logo" : "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/University_of_Maryland_Seal.svg/1024px-University_of_Maryland_Seal.svg.png",
+    "Logo2" : "http://geog.umd.edu/sites/default/files/depts/geog.png"
+  }, {
+    "FullName" : "fusionSpan",
+    "Job" : {
+      "Description" : [ "Consulted with clients about their organization’s needs and developed custom tools to meet them.", "Developed a JSON loader in Java to bridge data analytic software to various APIs." ],
+      "EndDate" : "June 2014",
+      "StartDate" : "February 2015",
+      "Title" : "Java Developer"
+    },
+    "Location" : {
+      "Address" : "1150 18th NW , Ste 450, Washington DC 20036"
+    },
+    "Logo" : "http://fusionspan.com/wp-content/themes/agency/themify/img.php?src=http://fusionspan.com/wp-content/uploads/2014/10/fusionSpan_with_slogan-small1.png&w=&h=100&zc=1"
+  }, {
+    "FullName" : "Conifer Health Solutions",
+    "Job" : {
+      "Description" : [ "Designed and developed and internal application that allowed contractors to log their billable hours for multiple tickets.", "Worked with development team to redesign our Patient Management application using AngularJs, C# and ASP.NET.", "Improved the redesigned application with new functionality and speed." ],
+      "EndDate" : "",
+      "StartDate" : "June 2015",
+      "Title" : "Junior Software Developer"
+    },
+    "Location" : {
+      "Address" : "1596 Whitehall Rd, Annapolis, MD 21409"
+    },
+    "Logo" : "data:image/png;base64,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"
+  }, {
+    "FullName" : "ARHU Classroom Support",
+    "Job" : {
+      "Description" : [ "Provided Windows, Mac and Linux support to classrooms and Professors", "Troubleshoot issues with Audio/Visual equipment.", "Trained new hires on office procedures and troubleshooting tecniques." ],
+      "EndDate" : "December 2014",
+      "StartDate" : "October 2011",
+      "Title" : "Student IT Technician"
+    },
+    "Location" : {
+      "Address" : "1102 Francis Scott Key Hall, University of Maryland College Park, MD 20742 "
+    },
+    "Logo" : "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/University_of_Maryland_Seal.svg/1024px-University_of_Maryland_Seal.svg.png",
+    "Logo2" : "https://www.arhu.umd.edu/sites/default/files/arhu_logo.png"
+  } ]
+}
