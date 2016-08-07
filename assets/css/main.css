@@ -813,6 +813,10 @@
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
 	}
+	
+	.center {
+		text-align: center;
+	}
 
 /* Table */
 
