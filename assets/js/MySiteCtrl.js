@@ -5,8 +5,10 @@ myApp.controller('MySiteCtrl', ['$scope', 'MyService',
     $scope.noWrapSlides = false;
     $scope.active = 0;
     $scope.vm = new ViewModel();
-     
-
+    $scope.subject = "";
+    $scope.body = "";
+    $scope.emailUrl = "mailto:kem@klegg.tld?subject=" + $scope.subject +
+        "&body=" + $scope.body;
     
     // $scope.Kemari = {
     //     About: {},
@@ -21,7 +23,9 @@ myApp.controller('MySiteCtrl', ['$scope', 'MyService',
           $scope.vm.load();
      };
 
-      $scope.loadModel();
+    $scope.loadModel();
+    $scope.vm.Contact = new Contact();
+    
 
     // MyService.getGetModel().then(function(resp){
     //     //MyService.logSuccess(resp);
@@ -119,7 +123,17 @@ myApp.controller('MySiteCtrl', ['$scope', 'MyService',
         return _this;
     }
 
+    function Contact(){
+        _this = this;
+        _this.name;
+        _this.emailAddress;
+        _this.subject;
+        _this.body;
+        _this.url = "mailto:kem@klegg.tld?subject=" + _this.subject +
+        "&body=" + _this.body;
 
+        return _this;
+    }
 
  
     

@@ -60,7 +60,7 @@
 						<a href="#work" class="icon fa-briefcase"><span>Experience</span></a>
 						<a href="#portfolio" class="icon fa-code"><span>Portfolio</span></a>
 						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
-						<a href="#" class="icon fa-twitter"><span>Twitter</span></a>
+						<a ng-if="false" href="#" class="icon fa-twitter"><span>Twitter</span></a>
 					</nav>
 
 				<!-- Main -->
@@ -163,23 +163,26 @@
 								<header>
 									<h2>Contact Me</h2>
 								</header>
-								<form action="#" method="post">
+								<div>
+
+								</div>
+								<form  action="#" method="post">
 									<div>
 										<div class="row">
 											<div class="6u 12u$(mobile)">
-												<input type="text" name="name" placeholder="Name" />
+												<input type="text" ng-model="vm.Contact.name" name="name" placeholder="Name" />
 											</div>
-											<div class="6u$ 12u$(mobile)">
-												<input type="text" name="email" placeholder="Email" />
+											<!--<div class="6u$ 12u$(mobile)">
+												<input type="text" ng-model="vm.Contact.emailAddress" name="email" placeholder="Email" />
+											</div>-->
+											<div class="12u$">
+												<input type="text" ng-model="vm.Contact.subject" name="subject" placeholder="Subject" />
 											</div>
 											<div class="12u$">
-												<input type="text" name="subject" placeholder="Subject" />
+												<textarea name="message" ng-model="vm.Contact.body" placeholder="Message" rows="8"></textarea>
 											</div>
 											<div class="12u$">
-												<textarea name="message" placeholder="Message" rows="8"></textarea>
-											</div>
-											<div class="12u$">
-												<input type="submit" value="Send Message" />
+												<a ng-href="mailto:kem@klegg.tld?subject={{vm.Contact.subject}}&body={{vm.Contact.body}}%0A%0A--{{vm.Contact.name}}">Send Message</a>
 											</div>
 										</div>
 									</div>
@@ -190,6 +193,12 @@
 
 				<!-- Footer -->
 					<div id="footer">
+						<table> 
+							<tr> 
+								<td><i> <a href="https://twitter.com/kemaric" class="icon fa fa-twitter fa-2x"><span>Twitter</span></a> </i></td> 
+								<td><i> <a href="https://www.linkedin.com/in/kemari-legg-38126a14" class="icon fa fa-linkedin fa-2x"><span>Linkedin</span></a> </i></td> 							
+							</tr>
+						</table>
 						<ul class="copyright">
 							<li>&copy; Kemaric.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
