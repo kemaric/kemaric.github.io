@@ -20,6 +20,14 @@
 		<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
 		<!-- AngularJS -->
 		<script src="assets/bower_components/angular/angular.min.js"></script>
+
+		<!-- Angular Logger -->
+		<script src="assets/bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+
+		<!-- Google Maps scripts-->
+		<script src="assets/bower_components/lodash/dist/lodash.js"></script>
+		<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    
 		<!-- Firebase -->
 		<script src="assets/bower_components/firebase/firebase.js"></script>
 		<!-- AngularFire -->
@@ -35,6 +43,7 @@
 		<!-- Angular Route-->
 		<script src="assets/bower_components/angular-route/angular-route.min.js"></script>
 		
+	
     	<!-- Bootstrap -->
 		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
 
@@ -56,8 +65,8 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#me" class="icon fa-home active"><span>Home</span></a>
-						<a href="#about" class="icon fa-user"><span>About Me</span></a>
-						<a href="#work" class="icon fa-briefcase"><span>Experience</span></a>
+						<a href="#about" class="icon fa-user"><span>About</span></a>
+						<!--<a href="#work" class="icon fa-briefcase"><span>Experience</span></a>-->
 						<a href="#portfolio" class="icon fa-code"><span>Portfolio</span></a>
 						<a href="#contact" class="icon fa-envelope"><span>Contact</span></a>
 						<a ng-if="false" href="#" class="icon fa-twitter"><span>Twitter</span></a>
@@ -81,13 +90,12 @@
 							<article id="about" class="panel">
 								<header>
 									<h2>About Me</h2>
+									<hr class="small">
 								</header>
 								<p ng-cloak>
 									{{ vm.model.About.details }}
 								</p>
-								<h3>
-									Interests
-								</h3>
+
 								<section>
 									<div style="height: 505px">
 										<div uib-carousel active="active" internal="myInterval" no-wrap="noWrapSlides">
@@ -103,7 +111,7 @@
 								</section>
 							</article>
 						<!-- Work -->
-							<article id="work" class="panel">
+							<!--<article id="work" class="panel">
 								<header>
 									<h2>Experience</h2>
 								</header>
@@ -112,13 +120,22 @@
 									and side projects
 								</p>
 								<section>
-									
+									<div id="workMapContainer">
+										<ui-gmap-google-map item-width="75%" center="map.center" zoom="map.zoom" options="options">
+
+										</ui-gmap-google-map>
+
+										<div id="workMap" item-width="25%">
+
+										</div>
+									</div>
 								</section>
-							</article>
+							</article>-->
 						<!-- Portfolio -->
 							<article id="portfolio" class="panel">
 								<header>
-									<h2>Projects</h2>
+									<h2>Portfolio</h2>
+									<hr class="small">
 								</header>							
 								<section>
 									<div class="row">
@@ -162,6 +179,7 @@
 							<article id="contact" class="panel">
 								<header>
 									<h2>Contact Me</h2>
+									<hr class="small">
 								</header>
 								<div>
 
@@ -196,6 +214,8 @@
 						<table> 
 							<tr> 
 								<td><i> <a href="https://twitter.com/kemaric" class="icon fa fa-twitter fa-2x"><span>Twitter</span></a> </i></td> 
+								<td><i> <a href="KemariLeggResume.pdf" class="icon fa fa-file-pdf-o fa-2x"><span>Resume</span></a> </i></td>
+								<td><i> <a href="https://github.com/kemaric" class="icon fa fa-github fa-2x"><span>Github</span></a> </i></td>	
 								<td><i> <a href="https://www.linkedin.com/in/kemari-legg-38126a14" class="icon fa fa-linkedin fa-2x"><span>Linkedin</span></a> </i></td> 							
 							</tr>
 						</table>

@@ -1,5 +1,5 @@
 var myApp = angular.module('MySite');
-myApp.controller('MySiteCtrl', ['$scope', 'MyService',
+myApp.controller('MySiteCtrl', ['$scope', 'MyService','uiGmapGoogleMapApi',
     function($scope, MyService) {
     $scope.myInterval = 5000;
     $scope.noWrapSlides = false;
@@ -9,7 +9,8 @@ myApp.controller('MySiteCtrl', ['$scope', 'MyService',
     $scope.body = "";
     $scope.emailUrl = "mailto:kem@klegg.tld?subject=" + $scope.subject +
         "&body=" + $scope.body;
-    
+    $scope.map = {center: {latitude: 51.219053, longitude: 4.404418 }, zoom: 14 };
+        $scope.options = {scrollwheel: false};
     // $scope.Kemari = {
     //     About: {},
     //     Interests: {},
