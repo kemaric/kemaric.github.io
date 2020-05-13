@@ -6,50 +6,41 @@
 -->
 <html>
 	<head>
-		<title>Kemaric World</title>
+		<title>Kemaric</title>
 		<meta charset="utf-8" />
+		<!-- Icons For PWA -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d55bc3">
+		<meta name="msapplication-TileColor" content="#9f00a7">
+		<meta name="theme-color" content="#ffffff">
+		<!-- End Icons -->
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!-- Scripts -->
 		<!-- Jquery -->
 		<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
-		<!-- AngularJS -->
-		<script src="assets/bower_components/angular/angular.min.js"></script>
-
-		<!-- Angular Logger -->
-		<script src="assets/bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
-
+		
 		<!-- Google Maps scripts-->
 		<script src="assets/bower_components/lodash/dist/lodash.js"></script>
-		<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
     
 		<!-- Firebase -->
 		<script src="assets/bower_components/firebase/firebase.js"></script>
-		<!-- AngularFire -->
-		<script src="assets/bower_components/angularfire/dist/angularfire.min.js"></script>
-		<!-- Angular Animate-->
-		<script src="assets/bower_components/angular-animate/angular-animate.js"></script>
-    	<!-- Angular UI-->
-		<script src="assets/bower_components/angular-ui/build/angular-ui.min.js"></script>
-		<!-- Angular Google Maps-->
-		<script src="assets/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
-		<!-- Angular Route-->
-		<script src="assets/bower_components/angular-route/angular-route.min.js"></script>
-		<!-- Angular Route-->
-		<script src="assets/bower_components/angular-route/angular-route.min.js"></script>
-		
-	
+				
     	<!-- Bootstrap -->
-		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
-
-	 	<script src="assets/js/app.js"></script>
-		<script src="assets/js/MyService.js"></script>
-		<script src="assets/js/MySiteCtrl.js"></script>
+	 	<!-- <script src="assets/js/app.js"></script> -->
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/skel-viewport.min.js"></script>
 		<script src="assets/js/util.js"></script>
@@ -224,5 +215,19 @@
 					</div>
 
 			</div>
+			<script>
+				/**
+				 * #PWA: This script is necessary for registering and enabling the Service worker to make this app a PWA.
+				 * It registers the service worker by references the service worker file 
+				 * */
+			!function () {
+					"use strict"; 
+					var o = Boolean("localhost" === window.location.hostname || "[::1]" === window.location.hostname || window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+					window.addEventListener("load", function () { 
+						"serviceWorker" in navigator && ("https:" === window.location.protocol || o) && navigator.serviceWorker.register("service-worker.js")
+						.then(function (o) { o.onupdatefound = function () { if (navigator.serviceWorker.controller) { var n = o.installing; n.onstatechange = function () { switch (n.state) { case "installed": break; case "redundant": throw new Error("The installing service worker became redundant.") } } } } })
+						.catch(function (o) { console.error("Error during service worker registration:", o) }) 
+					})
+				}();</script>
 	</body>
 </html>
